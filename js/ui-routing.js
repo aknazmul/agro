@@ -15,10 +15,9 @@
                     templateUrl: '../app/about-us/about-us.html',
                     controller: "aboutUsController"
                 }) 
-                // .state('otherwise', {
-                //     url: '/',
-                //     templateUrl: '../app/home/home.html',
-                //     controller: "homeController"
-                // });
+                .state('otherwise', {
+                    url: '/',
+                    // templateUrl: '../index.html'
+                });
         });
 })();

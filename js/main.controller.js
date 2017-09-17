@@ -2,8 +2,12 @@
 
     'use strict';
 
-    angular.module('AgroApp').controller('mainCtrl', ['$scope', 'screenSize', function ($scope, screenSize) {
- 
+    angular.module('AgroApp').controller('mainCtrl', ['$scope', '$rootScope', '$location', 'screenSize', function ($scope, $rootScope, $location, screenSize) {
+        
+        $scope.location = $location.path();
+        $rootScope.$on('$routeChangeSuccess', function() {
+            $scope.location = $location.path();
+        });
 
         //Mobile screenSize
         $scope.isShow = false;
@@ -16,6 +20,3 @@
     }]);
  
 })();
-
-
-

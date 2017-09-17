@@ -8350,6 +8350,9 @@ nav ul {
       nav ul li a:hover {
         background: rgba(64, 155, 48, 0.5);
         color: #ffffff; }
+    nav ul li .active {
+      background: rgba(64, 155, 48, 0.5);
+      color: #ffffff; }
 
 .copy-right {
   background: rgba(32, 106, 19, 0.5);

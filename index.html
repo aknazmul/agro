@@ -12,8 +12,8 @@
 
 </head>
 
-<body ng-class="{'active' : location === '/'}">
-    <div class="bg-wrapper" ng-controller="mainCtrl">
+<body>
+    <div class="bg-wrapper" ng-class="$state.current.data.bodyClass" ng-controller="mainCtrl">
 
         <div class="drop-outer">
             <div class="drop">
@@ -42,28 +42,37 @@
         </div>
 
         <div class="container-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="logo">
-                            <h1><a href="/"><img src="img/logo.png" alt="Agro"></a></h1>
+            <div class="logo-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="logo">
+                                <h1><a href="/"><img src="img/logo.png" alt="Agro"></a></h1>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <ui-view autoscroll="false"></ui-view>
+            <div class="inner-contianer">
+                <div class="body-container">
+                <ui-view autoscroll="false"></ui-view>
+                </div>
+            </div> 
 
             <nav>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 nav-wrapper">
+                            <div class="gradient-navbar">
+                                    <div id="tail"></div>
+                            </div>
                             <ul>
-                                <li><a ui-sref="home" ui-sref-active="active" title="Home">Home</a></li>
-                                <li><a ui-sref="about-us" ui-sref-active="active" title="About Us">About Us</a></li>
-                                <li><a ui-sref="services" ui-sref-active="active" title="Services">Services</a></li>
-                                <li><a ui-sref="products" ui-sref-active="active" title="Products">Products</a></li>
-                                <li><a ui-sref="contact" ui-sref-active="active" title="Contacts">Contacts</a></li>
+                                <li><a ui-sref="home" ui-sref-active="active" title="Home"><span>Home</span></a></li>
+                                <li><a ui-sref="about-us" ui-sref-active="active" title="About Us"><span>About Us</span></a></li>
+                                <li><a ui-sref="services" ui-sref-active="active" title="Services"><span>Services</span></a></li>
+                                <li><a ui-sref="products" ui-sref-active="active" title="Products"><span>Products</span></a></li>
+                                <li><a ui-sref="contact" ui-sref-active="active" title="Contacts"><span>Contacts</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -100,6 +109,34 @@
     <script src="js/main.controller.js"></script>
     <script src="app/home/home.controller.js"></script>
     <script src="app/about-us/about-us.controller.js"></script>
+
+
+    <script>
+
+    $(document).on('mousemove', function(e){
+        $('#tail').css({
+        left:  e.pageX - 200,
+        // top:   e.pageY
+        });
+    });
+
+    // $('body').mousemove(function (e) {
+    //     $('#tail').css({
+    //         left: e.pageX, 
+    //         bottom: e.pageY,
+    //      }); 
+    // });
+
+    //  $('#tail').animate({
+    //     'left': e.pageX + 15 + 'px'
+    // }, 0);
+
+    // $(document).bind('mousemove', function(e){
+    //     $('#tail').css({
+    //     left:  e.pageX,
+    //     });
+    // });
+    </script>
 
 </body>
 

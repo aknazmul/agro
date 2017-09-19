@@ -17,6 +17,9 @@
                 }) 
                 .state('otherwise', {
                     url: '/',
+                    data: {
+                    bodyClass: 'hide-innerpage'
+                    }
                     // templateUrl: '../index.html'
                 });
         });

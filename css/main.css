@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(../bower_components/animate.css/animate.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -8122,35 +8123,79 @@ button.close {
   clip: auto; }
 
 @font-face {
-  font-family: 'kpn_metricbold';
-  src: url("../fonts/kpnmetric-bold-webfont.woff2") format("woff2"), url("../fonts/kpnmetric-bold-webfont.woff") format("woff");
+  font-family: 'agro_metricbold';
+  src: url("../fonts/agrometric-bold-webfont.woff2") format("woff2"), url("../fonts/agrometric-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: 'kpn_metriclight';
-  src: url("../fonts/kpnmetric-light-webfont.woff2") format("woff2"), url("../fonts/kpnmetric-light-webfont.woff") format("woff");
+  font-family: 'agro_metriclight';
+  src: url("../fonts/agrometric-light-webfont.woff2") format("woff2"), url("../fonts/agrometric-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: 'kpn_metricregular';
-  src: url("../fonts/kpnmetric-regular-webfont.woff2") format("woff2"), url("../fonts/kpnmetric-regular-webfont.woff") format("woff");
+  font-family: 'agro_metricregular';
+  src: url("../fonts/agrometric-regular-webfont.woff2") format("woff2"), url("../fonts/agrometric-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: 'kpn_metricsemibold';
-  src: url("../fonts/kpnmetric-semibold-webfont.woff2") format("woff2"), url("../fonts/kpnmetric-semibold-webfont.woff") format("woff");
+  font-family: 'agro_metricsemibold';
+  src: url("../fonts/agrometric-semibold-webfont.woff2") format("woff2"), url("../fonts/agrometric-semibold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+.animated-slideInDownCustom-fadeout.ng-hide-add {
+  -webkit-animation: 0.5s fadeOut ease;
+  animation: 0.5s fadeOut ease; }
+
+.animated-slideInDownCustom-fadeout.ng-hide-remove {
+  -webkit-animation: 0.5s slideInDownCustom ease;
+  animation: 0.5s slideInDownCustom ease; }
+
+.animated-fadein-fadeout.ng-hide-add {
+  -webkit-animation: 0.5s fadeOut ease;
+  animation: 0.5s fadeOut ease; }
+
+.animated-fadein-fadeout.ng-hide-remove {
+  -webkit-animation: 0.5s fadeIn ease;
+  animation: 0.5s fadeIn ease; }
+
+.animated-slidein-fadeout.ng-hide-add {
+  -webkit-animation: 0.5s fadeOut ease;
+  animation: 0.5s fadeOut ease; }
+
+.animated-slidein-fadeout.ng-hide-remove {
+  -webkit-animation: 0.5s zoomIn ease;
+  animation: 0.5s zoomIn ease; }
+
+@-webkit-keyframes slideInDownCustom {
+  from {
+    -webkit-transform: translate(-50%, -110%);
+    transform: translate(-50%, -100%);
+    visibility: visible; }
+  to {
+    -webkit-transform: translate(0, 0, 0);
+    transform: translate(0, 0, 0); } }
+@keyframes slideInDownCustom {
+  from {
+    -webkit-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
+    visibility: visible; }
+  to {
+    -webkit-transform: translate(0, 0, 0);
+    transform: translate(0, 0, 0); } }
+.slideInDownCustom {
+  -webkit-animation-name: slideInDownCustom;
+  animation-name: slideInDownCustom; }
+
 html, body {
   position: relative;
   min-height: 100%;
   height: 100%; }
 
 body {
-  font-family: 'kpn_metriclight'; }
+  font-family: 'agro_metriclight'; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'kpn_metricbold'; }
+  font-family: 'agro_metricbold'; }
 
 ul, li {
   list-style: none;
@@ -8334,7 +8379,7 @@ body {
     .logo-container h1 label {
       color: #ffffff;
       font-size: 50px;
-      font-family: 'kpn_metricsemibold';
+      font-family: 'agro_metricsemibold';
       padding: 50px 0 0 0;
       margin: 0;
       float: right;
@@ -8354,7 +8399,7 @@ body {
     .hide-innerpage .logo-container .logo h1 label {
       color: #ffffff;
       font-size: 60px;
-      font-family: 'kpn_metricsemibold';
+      font-family: 'agro_metricsemibold';
       padding: 150px 0 0 20px;
       margin: 0;
       float: right;
@@ -8494,7 +8539,7 @@ nav {
       -ms-perspective: 1000;
       perspective: 1000; }
       nav ul li a {
-        font-family: 'kpn_metriclight';
+        font-family: 'agro_metriclight';
         font-size: 18px;
         color: #ffffff;
         display: block;
@@ -8548,7 +8593,7 @@ nav {
   width: 100%;
   padding: 10px 0; }
   .copy-right .copy-text {
-    font-family: 'kpn_metriclight';
+    font-family: 'agro_metriclight';
     color: #818e6f;
     font-size: 15px;
     margin: 7px 0 0 0;

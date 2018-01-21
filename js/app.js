@@ -1,5 +1,5 @@
 (function () {
     'use strict'; 
-    angular.module('AgroApp', ['ui.router', 'matchMedia']);
+    angular.module('AgroApp', ['ui.router', 'matchMedia', 'ngAnimate']);
 })();
 
